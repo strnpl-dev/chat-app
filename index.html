@@ -3,10 +3,134 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
     <title>Chat</title>
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app">
+      <section class="sidebar">
+        <div class="sidebar__profile">
+          <div class="sidebar__profile-info">
+            <div class="sidebar__profile-pfp">
+              <img src="/public/images/pfp-2.png" alt="pfp" />
+            </div>
+            <div class="sidebar__profile-wrapper">
+              <div class="sidebar__profile-name">Mehmet Revnaki</div>
+              <div class="sidebar__profile-status_wrapper">
+                <select
+                  class="sidebar__profile-status"
+                  name="profileStatus"
+                  id="profileStatus"
+                >
+                  <option value="online">Online</option>
+                  <option value="working">Working</option>
+                  <option value="offline">Offline</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="sidebar__profile-settings">
+            <img src="/public/icons/settings.svg" alt="" />
+          </div>
+        </div>
+        <div class="sidebar__chats">
+          <div class="sidebar__chats-person chat_active">
+            <div class="sidebar__chats-info">
+              <img src="/public/images/pfp-2.png" alt="pfp" />
+              <div class="sidebar__chats-wrapper">
+                <div class="sidebar__chats-name">Phillip Torff</div>
+                <div class="sidebar__chats-message">Thank you Phillip!</div>
+              </div>
+            </div>
+            <div class="sidebar__chats-status">
+              <div class="sidebar__chats-date">17/06/2020</div>
+              <div class="sidebar__chats-online"><span></span></div>
+            </div>
+          </div>
+
+          <div class="sidebar__chats-person">
+            <div class="sidebar__chats-info">
+              <img src="/public/images/pfp-2.png" alt="pfp" />
+              <div class="sidebar__chats-wrapper">
+                <div class="sidebar__chats-name">Phillip Torff</div>
+                <div class="sidebar__chats-message">Thank you Phillip!</div>
+              </div>
+            </div>
+            <div class="sidebar__chats-status">
+              <div class="sidebar__chats-date">17/06/2020</div>
+              <div class="sidebar__chats-online"><span></span></div>
+            </div>
+          </div>
+
+          <div class="sidebar__chats-person">
+            <div class="sidebar__chats-info">
+              <img src="/public/images/pfp-2.png" alt="pfp" />
+              <div class="sidebar__chats-wrapper">
+                <div class="sidebar__chats-name">Phillip Torff</div>
+                <div class="sidebar__chats-message">Thank you Phillip!</div>
+              </div>
+            </div>
+            <div class="sidebar__chats-status">
+              <div class="sidebar__chats-date">17/06/2020</div>
+              <div class="sidebar__chats-online"><span></span></div>
+            </div>
+          </div>
+
+          <div class="sidebar__links">
+            <div class="sidebar__links-wrapper">
+              <div class="sidebar__links-solo link_active">
+                <img src="/public/icons/person.svg" alt="" />
+              </div>
+              <div class="sidebar__links-group">
+                <img src="/public/icons/group.svg" alt="" />
+              </div>
+              <div class="sidebar__links-favs">
+                <img src="/public/icons/star.svg" alt="" />
+              </div>
+              <div class="sidebar__links-search">
+                <img src="/public/icons/search.svg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="chat">
+        <div class="container">
+          <div class="chat__tabs">
+            <div class="chat__tabs-chat">Chat</div>
+            <div class="chat__tabs-media">Media</div>
+          </div>
+          <div class="chat__body"></div>
+          <div class="chat__inter">
+            <div class="chat__inter-settings">
+              <img src="/public/icons/settings.svg" alt="" />
+            </div>
+            <div class="chat__inter-input">
+              <div class="chat__inter-attach">
+                <input id="fileAtt" type="file" />
+                <label for="fileAtt">
+                  <img src="/public/icons/attachment.svg" alt="" />
+                </label>
+              </div>
+              <input type="text" placeholder="Type a new message..." />
+              <div class="chat__inter-btn">
+                <button type="submit">
+                  send
+                  <img src="/public/icons/send.svg" alt="" />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
     <script type="module" src="/src/js/main.js"></script>
   </body>
 </html>
